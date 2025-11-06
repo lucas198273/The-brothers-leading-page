@@ -3,10 +3,10 @@ export interface Product {
   name: string;
   description?: string;
   price?: number;
-  available?: boolean; // Mantido como opcional, mas vamos definir onde aplicável
+  available?: boolean;
   imageUrl: string;
   notes?: string[];
-  category: "tattoo" | "piercing" | "bz";
+  category: "israel" | "brenda" | "piercing";
   materials?: {
     type: string;
     price: number;
@@ -14,329 +14,38 @@ export interface Product {
 }
 
 export const products: Product[] = [
-  // Tatuagens (sem available definido, assumido como true por padrão)
+  // Israel
   {
-    id: "tattoo1",
-    name: "Tatuagem 1",
-    imageUrl: "/assets/soisa/img-s1.webp",
-    category: "tattoo",
-    available: true, // Adicionado para consistência
-  },
-  {
-    id: "tattoo2",
-    name: "Tatuagem 2",
-    imageUrl: "/assets/soisa/img-s2.webp",
-    category: "tattoo",
+    id: "israel1",
+    name: "Tatuagem Realista",
+    description: "Trabalho autoral do artista Israel — realismo com traços precisos e sombreados profundos.",
+    imageUrl: "/assets/israel/img-i1.webp",
+    category: "israel",
     available: true,
   },
+
+  // Brenda
   {
-    id: "tattoo3",
-    name: "Tatuagem 3",
-    imageUrl: "/assets/soisa/img-s3.webp",
-    category: "tattoo",
+    id: "brenda1",
+    name: "Tatuagem Feminina Delicada",
+    description: "Criação da artista Brenda — traços finos, delicados e simbólicos.",
+    imageUrl: "/assets/brenda/img-b1.webp",
+    category: "brenda",
     available: true,
   },
-  {
-    id: "tattoo4",
-    name: "Tatuagem 4",
-    imageUrl: "/assets/soisa/img-s4.webp",
-    category: "tattoo",
-    available: true,
-  },
-  {
-    id: "tattoo5",
-    name: "Tatuagem 5",
-    imageUrl: "/assets/soisa/img-s5.webp",
-    category: "tattoo",
-    available: true,
-  },
-  {
-    id: "tattoo6",
-    name: "Tatuagem 6",
-    imageUrl: "/assets/soisa/img-s6.webp",
-    category: "tattoo",
-    available: true,
-  },
-  {
-    id: "tattoo7",
-    name: "Tatuagem 7",
-    imageUrl: "/assets/soisa/img-s7.webp",
-    category: "tattoo",
-    available: true,
-  },
-  {
-    id: "tattoo8",
-    name: "Tatuagem 8",
-    imageUrl: "/assets/soisa/img-s8.webp",
-    category: "tattoo",
-    available: true,
-  },
-  {
-    id: "tattoo9",
-    name: "Tatuagem 9",
-    imageUrl: "/assets/soisa/img-s9.webp",
-    category: "tattoo",
-    available: true,
-  },
-  {
-    id: "tattoo10",
-    name: "Tatuagem 10",
-    imageUrl: "/assets/soisa/img-s10.webp",
-    category: "tattoo",
-    available: true,
-  },
-  {
-    id: "tattoo11",
-    name: "Tatuagem 11",
-    imageUrl: "/assets/soisa/img-s11.webp",
-    category: "tattoo",
-    available: true,
-  },
-  // BZ
-  {
-    id: "tattoo12",
-    name: "Tatuagem 1",
-    imageUrl: "/assets/bz/img-bz-1.webp",
-    category: "bz",
-    available: true,
-  },
-  {
-    id: "tattoo13",
-    name: "Tatuagem 2",
-    imageUrl: "/assets/bz/img-bz-2.webp",
-    category: "bz",
-    available: true,
-  },
-  {
-    id: "tattoo14",
-    name: "Tatuagem 3",
-    imageUrl: "/assets/bz/img-bz-3.webp",
-    category: "bz",
-    available: true,
-  },
-  {
-    id: "tattoo15",
-    name: "Tatuagem 4",
-    imageUrl: "/assets/bz/img-bz-4.webp",
-    category: "bz",
-    available: true,
-  },
-  {
-    id: "tattoo16",
-    name: "Tatuagem 5",
-    imageUrl: "/assets/bz/img-bz-5.webp",
-    category: "bz",
-    available: true,
-  },
-  {
-    id: "tattoo17",
-    name: "Tatuagem 6",
-    imageUrl: "/assets/bz/img-bz-6.webp",
-    category: "bz",
-    available: true,
-  },
-  {
-    id: "tattoo18",
-    name: "Tatuagem 7",
-    imageUrl: "/assets/bz/img-bz-7.webp",
-    category: "bz",
-    available: true,
-  },
-  {
-    id: "tattoo19",
-    name: "Tatuagem 8",
-    imageUrl: "/assets/bz/img-bz-8.webp",
-    category: "bz",
-    available: true,
-  },
-  {
-    id: "tattoo20",
-    name: "Tatuagem 9",
-    imageUrl: "/assets/bz/img-bz-9.webp",
-    category: "bz",
-    available: true,
-  },
-  {
-    id: "tattoo21",
-    name: "Tatuagem 10",
-    imageUrl: "/assets/bz/img-bz-10.webp",
-    category: "bz",
-    available: true,
-  },
-  // Piercings
+
+  // Piercing
   {
     id: "piercing1",
-    name: "Aplicação Personalizada",
-    description: "Perfurações personalizadas próximas ao lóbulo.",
+    name: "Piercing Nostril",
+    description: "Perfuração discreta no nariz com joia de aço cirúrgico ou titânio.",
     available: true,
     imageUrl: "/assets/sol/img-sol-1.webp",
-    notes: ["Joias pequenas", "Estética sutil"],
+    notes: ["Joias pequenas", "Estilo delicado"],
     category: "piercing",
     materials: [
       { type: "Aço cirúrgico", price: 80 },
-      { type: "Joia decorada dourada aço PVD", price: 90 },
       { type: "Titânio", price: 100 },
-    ],
-  },
-  {
-    id: "piercing2",
-    name: "Piercing Umbigo",
-    description: "Pequeno e discreto, ótimo para quem ama detalhe.",
-    available: true,
-    imageUrl: "/assets/sol/img-sol-2.webp",
-    notes: ["Joias pequenas", "Estética sutil"],
-    category: "piercing",
-    materials: [
-      { type: "Aço cirúrgico", price: 80 },
-      { type: "Titânio", price: 90 },
-    ],
-  },
-  {
-    id: "piercing3",
-    name: "Aplicação Personalizada",
-    description: "Perfurações personalizadas próximas ao lóbulo.",
-    available: true,
-    imageUrl: "/assets/sol/img-sol-3.webp",
-    notes: ["Joias pequenas", "Estética sutil"],
-    category: "piercing",
-    materials: [
-      { type: "Aço cirúrgico", price: 80 },
-      { type: "Joia decorada dourada aço PVD", price: 90 },
-      { type: "Titânio", price: 100 },
-    ],
-  },
-  {
-    id: "piercing4",
-    name: "Piercing Microdermal",
-    description: "Pequeno e discreto, ótimo para quem ama detalhe.",
-    available: true,
-    imageUrl: "/assets/sol/img-sol-4.webp",
-    notes: ["Joias pequenas", "Estética sutil"],
-    category: "piercing",
-    materials: [
-      { type: "Aço cirúrgico", price: 220 },
-      { type: "Titânio", price: 220 },
-    ],
-  },
-  {
-    id: "piercing5",
-    name: "Aplicação Personalizada",
-    description: "Perfurações personalizadas próximas ao lóbulo.",
-    available: true,
-    imageUrl: "/assets/sol/img-sol-5.webp",
-    notes: ["Joias pequenas", "Estética sutil"],
-    category: "piercing",
-    materials: [
-      { type: "Aço cirúrgico", price: 80 },
-      { type: "Joia decorada dourada aço PVD", price: 90 },
-      { type: "Titânio", price: 100 },
-    ],
-  },
-  {
-    id: "piercing6",
-    name: "Aplicação Personalizada",
-    description: "Perfurações personalizadas próximas ao lóbulo.",
-    available: true,
-    imageUrl: "/assets/sol/img-sol-6.webp",
-    notes: ["Joias pequenas", "Estética sutil"],
-    category: "piercing",
-    materials: [
-      { type: "Aço cirúrgico", price: 80 },
-      { type: "Joia decorada dourada aço PVD", price: 90 },
-      { type: "Titânio", price: 100 },
-    ],
-  },
-  {
-    id: "piercing7",
-    name: "Piercing Nostril",
-    description: "Argola ou ponto de luz discreto, ideal para quem busca estilo com delicadeza.",
-    available: true,
-    imageUrl: "/assets/sol/img-sol-7.webp",
-    notes: ["Joias pequenas", "Estética sutil"],
-    category: "piercing",
-    materials: [
-      { type: "Aço cirúrgico", price: 80 },
-      { type: "Joia decorada dourada aço PVD", price: 90 },
-      { type: "Titânio", price: 100 },
-    ],
-  },
-  {
-    id: "piercing8",
-    name: "Aplicação Personalizada",
-    description: "Perfurações personalizadas próximas ao lóbulo.",
-    available: true,
-    imageUrl: "/assets/sol/img-sol-8.webp",
-    notes: ["Joias pequenas", "Estética sutil"],
-    category: "piercing",
-    materials: [
-      { type: "Aço cirúrgico", price: 80 },
-      { type: "Joia decorada dourada aço PVD", price: 90 },
-      { type: "Titânio", price: 100 },
-    ],
-  },
-  {
-    id: "piercing9",
-    name: "Aplicação Personalizada",
-    description: "Perfurações personalizadas próximas ao lóbulo.",
-    available: true,
-    imageUrl: "/assets/sol/img-sol-9.webp",
-    notes: ["Joias pequenas", "Estética sutil"],
-    category: "piercing",
-    materials: [
-      { type: "Aço cirúrgico", price: 80 },
-      { type: "Joia decorada dourada aço PVD", price: 90 },
-      { type: "Titânio", price: 100 },
-    ],
-  },
-  {
-    id: "piercing10",
-    name: "Piercing Orelha Conch",
-    description: "Perfuração Conch com joia decorada.",
-    available: true,
-    imageUrl: "/assets/sol/img-sol-10.webp",
-    category: "piercing",
-    materials: [
-      { type: "Aço cirúrgico", price: 80 },
-      { type: "Joia decorada dourada aço PVD", price: 90 },
-      { type: "Titânio", price: 100 },
-    ],
-  },
-  {
-    id: "piercing11",
-    name: "Aplicação Personalizada",
-    description: "Perfurações personalizadas próximas ao lóbulo.",
-    available: true,
-    imageUrl: "/assets/sol/img-sol-11.webp",
-    category: "piercing",
-    materials: [
-      { type: "Aço cirúrgico", price: 80 },
-      { type: "Joia decorada dourada aço PVD", price: 90 },
-      { type: "Titânio", price: 100 },
-    ],
-  },
-  {
-    id: "piercing12",
-    name: "Piercing Nariz Nostril",
-    description: "Argola ou ponto de luz discreto, ideal para quem busca estilo com delicadeza.",
-    available: true,
-    imageUrl: "/assets/sol/img-sol-12.webp",
-    category: "piercing",
-    materials: [
-      { type: "Aço cirúrgico", price: 80 },
-      { type: "Joia decorada dourada aço PVD", price: 90 },
-      { type: "Titânio", price: 100 },
-    ],
-  },
-  {
-    id: "piercing13",
-    name: "Perfuração íntima",
-    description: "Perfuração delicada em região íntima.",
-    available: true,
-    imageUrl: "/assets/sol/img-sol-13.webp",
-    category: "piercing",
-    materials: [
-      { type: "Aço cirúrgico", price: 110 },
-      { type: "Titânio", price: 110 },
     ],
   },
 ];

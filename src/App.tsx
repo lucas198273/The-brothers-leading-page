@@ -10,24 +10,22 @@ import About from "./pages/About";
 import Footer from "./components/Footer/Footer";
 import SocialMediaSection from "./components/SocialMidia/SocialMIdia";
 import ProductInfoSection from "./components/ProductInfoSection/ProductInfoSection";
-import { CartProvider, useCart } from "../contexts/CartContext";
-import Cart from "./components/Cart/Cart";
+import { CartProvider } from "../contexts/CartContext";
+
 import ProductPage from "./pages/ProductPage";
 import AboutPiercer from "./components/AboutPiercer/AboutPiercer";
 import ScrollTop from "./components/ScrollTop/ScrollTop";
 import CategorySection from "./components/CategorySection/CategorySection";
 import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange/ScrollToTopOnRouteChange";
 import PiercingSection from "./components/PiercingSection/PiercingSection";
-import AboutTattooArtistBZ from "./components/AboutTattooArtistBZ/AboutTattooArtistBZ";
-import AboutTattooArtistSoisa from "./components/AboutTattooArtistSoisa/AboutTattooArtistSoisa";
-import ProductDetailPage from "./pages/ProductDetailPage";
+import AboutTattooArtistBrenda from "./components/AboutTattooArtistBrenda/AboutTattooArtistBrenda";
+import AboutTattooArtistIsrael from "./components/AboutTattooArtistIsrael/AboutTattooArtistIsrael";
+
 import { HelmetProvider, Helmet } from "react-helmet-async";
-import Amazon from "./pages/Amazon";
 import PoliticaEPrivacidade from "./pages/PoliticasEPrivacidade";
-import GaleriaSoisa from "./components/GaleriaSoisa/GaleriaSoisa.tsx";
 
 function AppContent() {
-  const { items, total, toggleCart } = useCart();
+
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -35,7 +33,7 @@ function AppContent() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-100 text-gray-800">
-      <Header onCartClick={() => toggleCart(true)} cartItemCount={items.length} />
+      <Header />
 
       {/* Scroll automático para topo em mudança de rota */}
       <ScrollToTopOnRouteChange />
@@ -61,13 +59,13 @@ function AppContent() {
               </Helmet>
               <main className="pt-20 min-h-screen flex flex-col">
                 <Hero />
-                <AboutTattooArtistSoisa />
+                <AboutTattooArtistIsrael />
                 <section className="bg-white py-10">
-                  <CategorySection category="tattoo" />
+                  <CategorySection category="israel" />
                 </section>
-                <AboutTattooArtistBZ />
+                <AboutTattooArtistBrenda />
                 <section className="bg-white py-10">
-                  <CategorySection category="bz" />
+                  <CategorySection category="brenda" />
                 </section>
                 <AboutPiercer />
                 <section className="bg-white">
@@ -81,18 +79,12 @@ function AppContent() {
         />
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<ProductPage />} />
-        <Route path="/product/:id" element={<ProductDetailPage />} />
-        <Route path="/afiliados" element={<Amazon />} />
         <Route path="/Politicas" element={<PoliticaEPrivacidade />} />
-        <Route path="/galeria" element={<GaleriaSoisa />} />
       </Routes>
 
       <Footer />
 
-      <Cart
-        key={`${items.length}-${total.toFixed(2)}`}
-        onClose={() => toggleCart(false)}
-      />
+    
     </div>
   );
 }

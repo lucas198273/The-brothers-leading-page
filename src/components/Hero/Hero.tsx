@@ -33,51 +33,56 @@ Hora: ${form.hora}`;
   return (
     <>
       <Helmet>
-        <title>Soisa Tattoo Studio | Arte e Tatuagens em Betim</title>
+        <title>Authentic Studio | Tatuagens e Piercings</title>
         <meta
           name="description"
-          content="Tatuagens feitas com propósito, arte e personalidade em Betim - Soisa Tattoo Studio. Agende sua sessão conosco!"
+          content="Arte e autenticidade em cada traço — agende sua sessão no Authentic Studio."
         />
-        <meta name="keywords" content="tatuagem, piercing, estúdio de tatuagem, Betim, Soisa Tattoo, arte corporal" />
-        <meta property="og:title" content="Soisa Tattoo Studio | Arte e Tatuagens em Betim" />
         <meta
-          property="og:description"
-          content="Tatuagens feitas com propósito, arte e personalidade em Betim - Soisa Tattoo Studio. Agende sua sessão conosco!"
+          name="keywords"
+          content="tatuagem, piercing, estúdio de tatuagem, Authentic Studio, arte corporal"
         />
       </Helmet>
 
-      <section className="relative w-full bg-black text-white flex items-center justify-center px-4 py-48 md:py-12 border-b-4 border-[#00b4d8]">
-        <div className="flex flex-col-reverse md:flex-row w-full max-w-6xl items-center gap-8">
+      <section className="relative w-full bg-white text-black flex items-center justify-center px-4 py-20 md:py-28 border-b-4 border-[#4A5D23] overflow-hidden">
+        <div className="flex flex-col-reverse md:flex-row w-full max-w-6xl items-center gap-10">
+          {/* Texto e botão */}
           <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-4">
-            <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-              Dê vida à sua ideia <br />
-              com traços precisos
+            <h1 className="text-3xl md:text-5xl font-bold leading-tight text-black">
+              A autenticidade é <br /> a sua marca.
             </h1>
-            <p className="text-base md:text-xl text-gray-300 leading-relaxed">
-              Tatuagens feitas com propósito, arte e personalidade.
+            <p className="text-base md:text-xl text-gray-700 leading-relaxed">
+              Tatuagens e piercings feitos com técnica, estilo e personalidade.
             </p>
-            <p className="text-base md:text-lg text-gray-400 leading-relaxed font-semibold">
-              Localizado em Betim - MG <br />
-              Av. Amazonas nº608
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed font-semibold">
+              Betim - MG <br /> Av. Amazonas nº608
             </p>
             <button
               onClick={() => setIsOpen(true)}
-              className="px-6 py-2 md:px-8 md:py-3 bg-[#00b4d8] hover:bg-[#009ac1] transition-shadow shadow-md text-white font-semibold rounded-md"
+              className="px-6 py-3 bg-[#4A5D23] hover:bg-[#3B4C1C] transition-all shadow-md text-white font-semibold rounded-md"
             >
               Agendar Sessão
             </button>
           </div>
 
-          <div className="w-full md:w-1/2 flex justify-center">
+          {/* Bloco das imagens */}
+          <div className="w-full md:w-1/2 flex justify-center relative">
+            {/* Imagem esquerda levemente rotacionada */}
             <img
-              src="/assets/businesimg/img-es-1.webp"
+              src="/assets/israel/img-i1.webp"
               alt="Artista tatuador"
-              className="w-[50%] max-w-lg rounded-lg shadow-2xl transition-transform duration-300 hover:scale-105 object-contain"
+              className="w-[45%] sm:w-[40%] max-w-xs rounded-lg shadow-xl transform -rotate-6 translate-x-6 md:translate-x-8 object-cover transition-transform duration-300 hover:scale-105"
+            />
+            {/* Imagem direita levemente rotacionada (invertida) */}
+            <img
+              src="/assets/brenda/img-b1.webp"
+              alt="Trabalho artístico"
+              className="w-[45%] sm:w-[40%] max-w-xs rounded-lg shadow-xl transform rotate-6 -translate-x-6 md:-translate-x-8 object-cover transition-transform duration-300 hover:scale-105"
             />
           </div>
         </div>
 
-        {/* Modal */}
+        {/* Modal de agendamento */}
         {isOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-4">
             <div className="bg-white rounded-xl p-6 w-full max-w-md shadow-xl relative animate-[scale_0.3s_ease-in-out]">
@@ -88,7 +93,10 @@ Hora: ${form.hora}`;
               >
                 ×
               </button>
-              <h3 className="text-2xl font-bold mb-4 text-black text-center">Agendar Sessão</h3>
+              <h3 className="text-2xl font-bold mb-4 text-black text-center">
+                Agendar Sessão
+              </h3>
+
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="nome" className="block text-gray-700 font-semibold mb-1">
@@ -101,7 +109,7 @@ Hora: ${form.hora}`;
                     value={form.nome}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 py-2 border rounded focus:outline-none focus:ring focus:border-blue-300"
+                    className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#4A5D23]"
                     placeholder="Digite seu nome completo"
                   />
                 </div>
@@ -117,7 +125,7 @@ Hora: ${form.hora}`;
                     value={form.telefone}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 py-2 border rounded focus:outline-none focus:ring focus:border-blue-300"
+                    className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#4A5D23]"
                     placeholder="(00) 00000-0000"
                   />
                 </div>
@@ -132,7 +140,7 @@ Hora: ${form.hora}`;
                     value={form.tipoServico}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 py-2 border rounded focus:outline-none focus:ring focus:border-blue-300"
+                    className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#4A5D23]"
                     aria-label="Selecione o tipo de serviço"
                   >
                     <option value="">Selecione</option>
@@ -152,7 +160,7 @@ Hora: ${form.hora}`;
                     value={form.data}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 py-2 border rounded focus:outline-none focus:ring focus:border-blue-300"
+                    className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#4A5D23]"
                   />
                 </div>
 
@@ -167,13 +175,13 @@ Hora: ${form.hora}`;
                     value={form.hora}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 py-2 border rounded focus:outline-none focus:ring focus:border-blue-300"
+                    className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#4A5D23]"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-3 bg-[#00b4d8] hover:bg-[#009ac1] transition-shadow shadow-md rounded-lg text-white font-semibold"
+                  className="w-full py-3 bg-[#4A5D23] hover:bg-[#3B4C1C] transition-shadow shadow-md rounded-lg text-white font-semibold"
                 >
                   Enviar no WhatsApp
                 </button>
