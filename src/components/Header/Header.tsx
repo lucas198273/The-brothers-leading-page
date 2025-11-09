@@ -58,7 +58,6 @@ export default function Header() {
           { to: "/about", label: "Sobre" },
           { to: "/products", label: "Tatuagens e Piercings" },
           { to: "/politicas", label: "Políticas" },
-          { to: "/galeria", label: "Galeria" },
         ].map((link) => (
           <Link
             key={link.to}

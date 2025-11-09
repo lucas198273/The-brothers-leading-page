@@ -22,6 +22,14 @@ export const products: Product[] = [
     imageUrl: "/assets/israel/img-i1.webp",
     category: "israel",
     available: true,
+  },  
+  {
+    id: "israel1",
+    name: "Tatuagem Realista",
+    description: "Trabalho autoral do artista Israel — realismo com traços precisos e sombreados profundos.",
+    imageUrl: "/assets/israel/img-i2.webp",
+    category: "israel",
+    available: true,
   },
 
   // Brenda

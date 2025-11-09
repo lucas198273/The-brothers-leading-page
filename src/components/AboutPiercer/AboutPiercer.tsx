@@ -42,13 +42,7 @@ export default function AboutPiercer() {
           <p className="text-base md:text-lg text-gray-300 mb-6 leading-relaxed">
             Conheça nossa body piercer residente, especialista em transformar estilo e atitude em arte corporal com total segurança e técnica. Experiência, cuidado e personalidade em cada aplicação. Agende seu horário e viva essa transformação com confiança.
           </p>
-          <button
-            onClick={handleWhatsAppClick}
-            className="inline-block bg-[#556b2f] text-white font-semibold text-base md:text-lg py-2 md:py-3 px-6 md:px-8 rounded-full shadow-md hover:bg-[#4a5f28] hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#556b2f] focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50"
-            disabled={isClicked}
-          >
-            Agendar via WhatsApp
-          </button>
+         
         </div>
       </div>
     </section>

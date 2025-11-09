@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import StudioAbout from "../components/StudioAbout/StudioAbout";
-import ArtistaPreview from "../components/ArtistaPreview/ArtistaPreview";
 import { ArrowUp } from "lucide-react";
-import AboutCp from "../components/AboutCp/AboutCp";
 
 export default function About() {
   const [showScroll, setShowScroll] = useState(false);
@@ -29,8 +27,7 @@ export default function About() {
   return (
     <div>
       <StudioAbout />
-      <ArtistaPreview />
-       <AboutCp/>
+      
 
       {/* Botão voltar ao topo */}
       {showScroll && (
