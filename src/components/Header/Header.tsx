@@ -38,7 +38,7 @@ export default function Header() {
     <img
       src="/assets/logo.webp"
       alt="Artista de Música Clássica"
-      className="w-24 sm:w-28 md:w-32 object-contain drop-shadow-[0_0_15px_rgba(0,120,255,0.45)] transition-transform hover:scale-105"
+      className="w-32 sm:w-32 md:w-32 object-contain drop-shadow-[0_0_15px_rgba(0,120,255,0.45)] transition-transform hover:scale-105"
     />
   </a>
 </div>
