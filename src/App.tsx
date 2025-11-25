@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "./App.css"; // Ajustado para o caminho correto
+import "./App.css";
 
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
@@ -22,8 +22,6 @@ import PoliticaEPrivacidade from "./pages/PoliticasEPrivacidade";
 import ContactPage from "./pages/ContactPage";
 
 function AppContent() {
-
-
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
@@ -32,45 +30,91 @@ function AppContent() {
     <div className="min-h-screen flex flex-col bg-gray-100 text-gray-800">
       <Header />
 
-      {/* Scroll automático para topo em mudança de rota */}
+      {/* Scroll ao topo ao trocar rota */}
       <ScrollToTopOnRouteChange />
 
-      {/* Botão para voltar ao topo manualmente */}
+      {/* Botão flutuante de voltar ao topo */}
       <ScrollTop />
 
       <Routes>
+        {/* ===================== HOME ===================== */}
         <Route
           path="/"
           element={
             <>
               <Helmet>
-                <title>Estúdio de Tatuagem em Betim | Soisa Tattoo Studio</title>
+                {/* SEO Básico */}
+                <title>Wesley Oliveira | Músico de Música Clássica e Violinista Profissional</title>
                 <meta
                   name="description"
-                  content="Estúdio de tatuagem e piercing com profissionais experientes. Agende sua sessão com nossos artistas."
+                  content="Wesley Oliveira é músico de música clássica e violinista profissional, disponível para casamentos, eventos, concertos e apresentações exclusivas."
                 />
                 <meta
                   name="keywords"
-                  content="tatuagem, piercing, estúdio, betim, soisa, tatuadores"
+                  content="música clássica, violinista, músico profissional, música para casamento, música para eventos, violinista para evento"
                 />
+                <link rel="canonical" href="https://seudominio.com/" />
+
+                {/* Open Graph */}
+                <meta property="og:title" content="Wesley Oliveira | Violinista e Músico de Música Clássica" />
+                <meta
+                  property="og:description"
+                  content="Contrate um violinista profissional para casamentos, eventos e apresentações exclusivas."
+                />
+                <meta property="og:image" content="https://seudominio.com/imagens/wesley.jpg" />
+                <meta property="og:url" content="https://seudominio.com/" />
+                <meta property="og:type" content="website" />
+
+                {/* Twitter */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Wesley Oliveira | Músico de Música Clássica" />
+                <meta
+                  name="twitter:description"
+                  content="Violinista profissional disponível para casamentos e eventos."
+                />
+                <meta name="twitter:image" content="https://seudominio.com/imagens/wesley.jpg" />
+
+                {/* Schema.org */}
+                <script type="application/ld+json">
+                  {`
+                    {
+                      "@context": "https://schema.org",
+                      "@type": "Musician",
+                      "name": "Wesley Oliveira",
+                      "jobTitle": "Músico de Música Clássica",
+                      "instrument": "Violino",
+                      "url": "https://seudominio.com",
+                      "image": "https://seudominio.com/imagens/wesley.jpg",
+                      "description": "Violinista profissional especializado em música clássica e apresentações em eventos.",
+                      "sameAs": [
+                        "https://instagram.com/seuperfil",
+                        "https://youtube.com/seucanal",
+                        "https://facebook.com/seuperfil"
+                      ]
+                    }
+                  `}
+                </script>
               </Helmet>
+
               <main className="pt-20 min-h-screen flex flex-col">
                 <Hero />
                 <AboutMusicArtistWesley />
+
                 <section className="bg-white py-10">
                   <CategorySection category="apresentacoes" />
                 </section>
-               
+
                 <section className="bg-white">
                   <CategorySection category="ensaios" />
                 </section>
-                
-               
+
                 <SocialMediaSection />
               </main>
             </>
           }
         />
+
+        {/* ===================== OUTRAS PÁGINAS ===================== */}
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<ProductPage />} />
         <Route path="/contact" element={<ContactPage />} />
@@ -78,8 +122,6 @@ function AppContent() {
       </Routes>
 
       <Footer />
-
-    
     </div>
   );
 }

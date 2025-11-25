@@ -15,18 +15,35 @@ export default function Hero() {
   return (
     <>
       <Helmet>
-        <title>Wesley Oliveira | Violoncelista</title>
+        {/* 🔹 SEO PRINCIPAL */}
+        <title>Wesley Oliveira | Violoncelista e Artista da Música Clássica</title>
+
         <meta
           name="description"
-          content="O som que transcende palavras — Wesley Oliveira, violoncelista, intérprete e artista brasileiro."
+          content="Wesley Oliveira é violoncelista formado pela UEMG, com trajetória entre o clássico e o contemporâneo. Concertos, gravações, eventos e experiências musicais únicas."
         />
+
         <meta
           name="keywords"
-          content="violoncelo, música clássica, músico, orquestra, violoncelista"
+          content="violoncelista, música clássica, música instrumental, músico profissional, orquestra, concerto, violoncelo"
         />
+
+        {/* 🔹 OPEN GRAPH (Facebook, Instagram, WhatsApp) */}
+        <meta property="og:title" content="Wesley Oliveira | Violoncelista" />
+        <meta
+          property="og:description"
+          content="Entre cordas, vibra o que palavras não alcançam — conheça o trabalho musical de Wesley Oliveira."
+        />
+        <meta property="og:image" content="/assets/imgs/img4.webp" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://seudominio.com" />
+
+  
+        {/* 🔹 INDEXAÇÃO */}
+        <meta name="robots" content="index, follow" />
       </Helmet>
 
-      {/* 🔹 HERO MUSICAL - PRETO + AZUL METÁLICO */}
+      {/* 🔹 HERO SECTION */}
       <section
         className="relative w-full flex items-center justify-center px-4 py-20 md:py-28 text-white overflow-hidden"
         style={{
@@ -35,8 +52,8 @@ export default function Hero() {
         }}
       >
         <div className="flex flex-col-reverse md:flex-row w-full max-w-6xl items-center gap-10">
-
-          {/* 🔵 TEXTO POÉTICO / EMOCIONAL */}
+          
+          {/* 🔹 TEXTOS */}
           <div
             className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-6"
             data-aos="fade-up"
@@ -49,43 +66,39 @@ export default function Hero() {
               Wesley Oliveira, violoncelista formado pela UEMG, transita entre o
               clássico e o contemporâneo. Nascido em São Paulo e acolhido por
               Minas Gerais, carrega no som das cordas a força de sua história —
-              passando pelo Instituto Ramacrisna, pelo punk hardcore, por
-              orquestras, palcos, viagens e encontros com grandes nomes da
-              música brasileira.  
+              do Instituto Ramacrisna ao punk hardcore, das orquestras aos
+              palcos pelo Brasil.
             </p>
 
             <p className="text-base md:text-lg text-blue-400 font-semibold">
-              Uma trajetória construída em alma, respiro e expressão.
+              Música feita de alma, respiro e expressão.
             </p>
 
-            <Link to="/contact" 
-              className="px-8 py-3 bg-blue-600 hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/30 text-white font-semibold rounded-md hover:shadow-blue-400/40">
-                Agendar apresentação
-            
+            <Link
+              to="/contact"
+              className="px-8 py-3 bg-blue-600 hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/30 text-white font-semibold rounded-md hover:shadow-blue-400/40"
+            >
+              Agendar apresentação
             </Link>
-        
           </div>
 
-          {/* 🔵 IMAGEM ÚNICA — VIOLONCELO */}
+          {/* 🔹 IMAGEM */}
           <div
             className="w-full md:w-1/2 flex justify-center relative"
             data-aos="fade-left"
           >
             <img
-              src="/assets/imgs/img4.webp" // <- substitua pela foto dele
-              alt="Wesley Oliveira tocando violoncelo"
+              src="/assets/imgs/img4.webp"
+              alt="Foto artística de Wesley Oliveira tocando violoncelo"
               className="w-[40%] max-w-md rounded-xl shadow-2xl shadow-blue-500/20 object-cover transition-transform duration-300 hover:scale-105"
             />
           </div>
         </div>
 
-        {/* 🔹 MODAL (opcional — mantive para você reaproveitar se quiser) */}
+        {/* 🔹 MODAL (mantido para uso futuro) */}
         {isOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-4">
-            <div
-              className="bg-[#0A0F1C] border border-blue-500/30 text-white rounded-xl p-6 w-full max-w-md shadow-xl relative animate-[scale_0.3s_ease-in-out]"
-              data-aos="zoom-in"
-            >
+            <div className="bg-[#0A0F1C] border border-blue-500/30 text-white rounded-xl p-6 w-full max-w-md shadow-xl relative animate-[scale_0.3s_ease-in-out]">
               <button
                 onClick={() => setIsOpen(false)}
                 className="absolute top-3 right-4 text-gray-400 hover:text-white text-2xl"
