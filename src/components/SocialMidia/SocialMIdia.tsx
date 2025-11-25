@@ -42,7 +42,7 @@ const SocialMediaSection: React.FC = () => {
               className="flex flex-col items-center transition-transform hover:scale-110 text-blue-500 hover:text-white"
             >
               <FaInstagram className="w-10 h-10 mb-2" />
-              <span className="text-sm font-medium">Instagram</span>
+              <span className="text-sm font-medium"> Instagram</span>
             </a>
           </div>
         </div>
