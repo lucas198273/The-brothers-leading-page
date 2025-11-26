@@ -72,7 +72,6 @@ function AppContent() {
                   name="twitter:description"
                   content="Violinista profissional disponível para casamentos e eventos."
                 />
-                <meta name="twitter:image" content="https://seudominio.com/imagens/wesley.jpg" />
 
                 {/* Schema.org */}
                 <script type="application/ld+json">
