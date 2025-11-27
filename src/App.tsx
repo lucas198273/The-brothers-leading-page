@@ -82,8 +82,8 @@ function AppContent() {
                       "name": "Wesley Oliveira",
                       "jobTitle": "Músico de Música Clássica",
                       "instrument": "Violino",
-                      "url": "https://seudominio.com",
-                      "image": "https://seudominio.com/imagens/wesley.jpg",
+                      "url": "https://wesleyoliveira.art",
+                      "image": "https://wesleyoliveira.art/imags/wesley.jpg",
                       "description": "Violinista profissional especializado em música clássica e apresentações em eventos.",
                       "sameAs": [
                         "https://instagram.com/seuperfil",
