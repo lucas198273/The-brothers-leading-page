@@ -9,118 +9,92 @@ export default function Hero() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    AOS.init({ duration: 600, once: true, easing: "ease-out" });
+    AOS.init({ duration: 700, once: true, easing: "ease-out" });
   }, []);
 
   return (
     <>
       <Helmet>
-        {/* 🔹 SEO PRINCIPAL */}
-        <title>Wesley Oliveira | Violoncelista e Artista da Música Clássica</title>
-
+        <title>The Brothers | Hamburgueria Artesanal</title>
         <meta
           name="description"
-          content="Wesley Oliveira é violoncelista formado pela UEMG, com trajetória entre o clássico e o contemporâneo. Concertos, gravações, eventos e experiências musicais únicas."
+          content="The Brothers — Hambúrguer artesanal na Rua do Rosário, 1091. Sabor forte, clássico e direto ao ponto."
         />
 
-        <meta
-          name="keywords"
-          content="violoncelista, música clássica, música instrumental, músico profissional, orquestra, concerto, violoncelo"
-        />
-
-        {/* 🔹 OPEN GRAPH (Facebook, Instagram, WhatsApp) */}
-        <meta property="og:title" content="Wesley Oliveira | Violoncelista" />
+        <meta property="og:title" content="The Brothers | Hambúrguer Artesanal" />
         <meta
           property="og:description"
-          content="Entre cordas, vibra o que palavras não alcançam — conheça o trabalho musical de Wesley Oliveira."
+          content="Experiência gastronômica autêntica, clara e impactante. Rua do Rosário, 1091."
         />
-        <meta property="og:image" content="/assets/imgs/img4.webp" />
+        <meta property="og:image" content="/assets/imgs/burger-hero.webp" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://seudominio.com" />
-
-  
-        {/* 🔹 INDEXAÇÃO */}
-        <meta name="robots" content="index, follow" />
       </Helmet>
 
-      {/* 🔹 HERO SECTION */}
-      <section
-        className="relative w-full flex items-center justify-center px-4 py-20 md:py-28 text-white overflow-hidden"
-        style={{
-          background:
-            "linear-gradient(180deg, #000000 0%, #020617 60%, #0A1628 100%)",
-        }}
-      >
-        <div className="flex flex-col-reverse md:flex-row w-full max-w-6xl items-center gap-10">
-          
-          {/* 🔹 TEXTOS */}
+      {/* HERO CLEAN / BRANCO + VERMELHO */}
+      <section className="relative w-full flex items-center justify-center px-4 py-20 md:py-32 bg-white text-black overflow-hidden">
+        <div className="flex flex-col-reverse md:flex-row w-full max-w-6xl items-center gap-12">
+          {/* TEXTOS */}
           <div
             className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-6"
             data-aos="fade-up"
           >
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-blue-400 drop-shadow-[0_0_20px_rgba(0,150,255,0.4)]">
-              Entre cordas, vibra o que <br /> palavras não alcançam.
+            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-red-600">
+              Hambúrguer artesanal,
+              <br /> sem mistério.
             </h1>
 
-            <p className="text-base md:text-lg text-gray-300 max-w-md leading-relaxed">
-              Wesley Oliveira, violoncelista formado pela UEMG, transita entre o
-              clássico e o contemporâneo. Nascido em São Paulo e acolhido por
-              Minas Gerais, carrega no som das cordas a força de sua história —
-              do Instituto Ramacrisna ao punk hardcore, das orquestras aos
-              palcos pelo Brasil.
+            <p className="text-base md:text-lg text-gray-700 max-w-md leading-relaxed">
+              A The Brothers traz uma proposta clara: sabor real, receita artesanal e qualidade do início ao fim.
+              Estamos na Rua do Rosário, 1091 — vem viver a experiência.
             </p>
 
-            <p className="text-base md:text-lg text-blue-400 font-semibold">
-              Música feita de alma, respiro e expressão.
+            <p className="text-base md:text-lg font-semibold text-red-600">
+              Vermelho na essência. Branco na identidade.
             </p>
 
             <Link
               to="/contact"
-              className="px-8 py-3 bg-blue-600 hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/30 text-white font-semibold rounded-md hover:shadow-blue-400/40"
+              className="px-8 py-3 bg-red-600 hover:bg-red-500 transition-all shadow-md text-white font-semibold rounded-md"
             >
-              Agendar apresentação
+              Fazer pedido
             </Link>
           </div>
 
-          {/* 🔹 IMAGEM */}
-          <div
-            className="w-full md:w-1/2 flex justify-center relative"
-            data-aos="fade-left"
-          >
+          {/* IMAGEM */}
+          <div className="w-full md:w-1/2 flex justify-center" data-aos="fade-left">
             <img
-              src="/assets/imgs/img4.webp"
-              alt="Foto artística de Wesley Oliveira tocando violoncelo"
-              className="w-[40%] max-w-md rounded-xl shadow-2xl shadow-blue-500/20 object-cover transition-transform duration-300 hover:scale-105"
+              src="/assets/imgs/image.png"
+              alt="Hambúrguer artesanal The Brothers"
+              className="w-[70%] max-w-md rounded-xl shadow-xl shadow-red-500/20 object-cover transition-transform duration-300 hover:scale-105"
             />
           </div>
         </div>
 
-        {/* 🔹 MODAL (mantido para uso futuro) */}
+        {/* MODAL */}
         {isOpen && (
-          <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-4">
-            <div className="bg-[#0A0F1C] border border-blue-500/30 text-white rounded-xl p-6 w-full max-w-md shadow-xl relative animate-[scale_0.3s_ease-in-out]">
+          <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 px-4">
+            <div className="bg-white border border-red-600 text-black rounded-xl p-6 w-full max-w-md shadow-xl relative animate-[scale_0.3s_ease-in-out]">
               <button
                 onClick={() => setIsOpen(false)}
-                className="absolute top-3 right-4 text-gray-400 hover:text-white text-2xl"
-                aria-label="Fechar formulário"
+                className="absolute top-3 right-4 text-red-600 hover:text-red-800 text-2xl"
               >
                 ×
               </button>
 
-              <h3 className="text-2xl font-bold mb-4 text-center text-blue-400">
-                Contato Profissional
+              <h3 className="text-2xl font-bold mb-4 text-center text-red-600">
+                Fale com a The Brothers
               </h3>
 
-              <p className="text-gray-300 text-center mb-4">
-                Entre em contato para concertos, gravações, eventos e projetos.
+              <p className="text-gray-700 text-center mb-4">
+                Contato para pedidos, eventos e combos especiais.
               </p>
 
               <a
                 href="https://wa.me/5531971705728"
                 target="_blank"
-                className="block w-full text-center py-3 bg-blue-600 rounded-lg font-semibold hover:bg-blue-500 shadow-lg shadow-blue-500/40 transition-all"
+                className="block w-full text-center py-3 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-500 transition-all"
               >
-                Falar no WhatsApp
+                Chamar no WhatsApp
               </a>
             </div>
           </div>
