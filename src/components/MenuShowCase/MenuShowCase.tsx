@@ -36,7 +36,7 @@ export default function MenuShowcase() {
         {items.map((item) => (
           <div
             key={item.name}
-            className="rounded-2xl overflow-hidden shadow-lg bg-red-600 hover:opacity-100 transition-opacity cursor-pointer"
+            className="float rounded-2xl overflow-hidden shadow-lg bg-red-600 hover:opacity-100 transition-opacity cursor-pointer"
           >
             {/* ÁREA VERMELHA COM IMAGEM */}
             <div className="w-full h-56 bg-red-600 flex items-center justify-center overflow-hidden">

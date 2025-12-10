@@ -25,7 +25,7 @@ export default function About() {
           data-aos="fade-up"
         >
           {/* IMAGEM */}
-          <div className=" md:w-1/2 w-1/2 mt-14">
+          <div className=" md:w-1/2 w-1/2 mt-14 float">
             <img
               src="/assets/imgs/logo.webp" // <-- substitua pela imagem real
               alt="Nossa hamburgueria"

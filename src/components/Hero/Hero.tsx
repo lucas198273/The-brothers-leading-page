@@ -36,7 +36,7 @@ export default function Hero() {
             data-aos="fade-up"
           >
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-white tracking-wide">
-              Peça The Brothers
+              The Brothers
               <br /> no iFood.
             </h1>
 
@@ -67,7 +67,7 @@ export default function Hero() {
 
           {/* IMAGEM */}
         <div
-  className="w-full md:w-1/2 flex justify-center"
+  className="w-full md:w-1/2 flex justify-center float"
   data-aos="fade-left"
 >
   <img
