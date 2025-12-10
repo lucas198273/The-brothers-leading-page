@@ -6,20 +6,18 @@ import "./App.css";
 
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
-import About from "./pages/About";
+import About from "./components/About/About";
 import Footer from "./components/Footer/Footer";
-import SocialMediaSection from "./components/SocialMidia/SocialMIdia";
 import { CartProvider } from "../contexts/CartContext";
 
-import ProductPage from "./pages/ProductPage";
 import ScrollTop from "./components/ScrollTop/ScrollTop";
-import CategorySection from "./components/CategorySection/CategorySection";
 import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange/ScrollToTopOnRouteChange";
-import AboutMusicArtistWesley from "./components/AboutMusicArtistWesley/AboutMusicArtistWesley";
 
 import { HelmetProvider, Helmet } from "react-helmet-async";
 import PoliticaEPrivacidade from "./pages/PoliticasEPrivacidade";
-import ContactPage from "./pages/ContactPage";
+import MenuShowCase from "./components/MenuShowCase/MenuShowCase";
+import SingleUnit from "./components/SingleUnit/SingleUnit";
+import InstagramGrid from "./components/InstagramGrid/InstagramGrid";
 
 function AppContent() {
   useEffect(() => {
@@ -44,44 +42,39 @@ function AppContent() {
             <>
               <Helmet>
                 {/* SEO Básico */}
-                <title>Wesley Oliveira | Músico de Música Clássica e Violinista Profissional</title>
+                <title>The Brothers Burguer | Hambúrguer Artesanal em Betim</title>
                 <meta
                   name="description"
-                  content="Wesley Oliveira é músico de música clássica e violinista profissional, disponível para casamentos, eventos, concertos e apresentações exclusivas."
+                  content="The Brothers Burguer — Hambúrguer artesanal feito com blend especial, pão macio, ingredientes frescos e muito sabor. Peça online e descubra a melhor experiência em hamburgueria artesanal de Betim."
                 />
                 <meta
                   name="keywords"
-                  content="música clássica, violinista, músico profissional, música para casamento, música para eventos, violinista para evento"
+                  content="hambúrguer artesanal, hamburgueria betim, the brothers burguer, smash burger, burger artesanal, comida artesanal, hamburguer delivery"
                 />
-                <link rel="canonical" href="https://wesleyoliveira.art/" />
+                <link rel="canonical" href="https://thebrothersburguer.com" />
 
-                {/* Open Graph */}
-                <meta property="og:title" content="Wesley Oliveira | Violinista e Músico de Música Clássica" />
-                <meta
-                  property="og:description"
-                  content="Contrate um violinista profissional para casamentos, eventos e apresentações exclusivas."
-                />
-                <meta property="og:image" content="https://wesleyoliveira.art/imagens/wesley.jpg" />
-                <meta property="og:url" content="https://wesleyoliveira.art/" />
-                <meta property="og:type" content="website" />
-
-             
-                {/* Schema.org */}
+            
+                {/* Schema.org — Restaurante */}
                 <script type="application/ld+json">
                   {`
                     {
                       "@context": "https://schema.org",
-                      "@type": "Musician",
-                      "name": "Wesley Oliveira",
-                      "jobTitle": "Músico de Música Clássica",
-                      "instrument": "Violino",
-                      "url": "https://wesleyoliveira.art",
-                      "image": "https://wesleyoliveira.art/imags/wesley.jpg",
-                      "description": "Violinista profissional especializado em música clássica e apresentações em eventos.",
+                      "@type": "Restaurant",
+                      "name": "The Brothers Burguer",
+                      "description": "Hambúrguer artesanal com blend exclusivo e ingredientes frescos em Betim.",
+                      "servesCuisine": "Hambúrguer Artesanal",
+                      "image": "https://thebrothersburguer.com/images/og-image.jpg",
+                      "priceRange": "$$",
+                      "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Betim",
+                        "addressRegion": "MG",
+                        "addressCountry": "BR"
+                      },
+                      "url": "https://thebrothersburguer.com",
                       "sameAs": [
-                        "https://instagram.com/seuperfil",
-                        "https://youtube.com/seucanal",
-                        "https://facebook.com/seuperfil"
+                        "https://instagram.com/thebrothersburguer",
+                        "https://facebook.com/thebrothersburguer"
                       ]
                     }
                   `}
@@ -90,17 +83,10 @@ function AppContent() {
 
               <main className="pt-20 min-h-screen flex flex-col">
                 <Hero />
-                <AboutMusicArtistWesley />
-
-                <section className="bg-white py-10">
-                  <CategorySection category="apresentacoes" />
-                </section>
-
-                <section className="bg-white">
-                  <CategorySection category="ensaios" />
-                </section>
-
-                <SocialMediaSection />
+                <MenuShowCase />
+                <SingleUnit />
+                <About />
+                <InstagramGrid />
               </main>
             </>
           }
@@ -108,8 +94,6 @@ function AppContent() {
 
         {/* ===================== OUTRAS PÁGINAS ===================== */}
         <Route path="/about" element={<About />} />
-        <Route path="/products" element={<ProductPage />} />
-        <Route path="/contact" element={<ContactPage />} />
         <Route path="/Politicas" element={<PoliticaEPrivacidade />} />
       </Routes>
 

@@ -1,13 +1,10 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Link } from "react-router-dom";
 
 export default function Hero() {
-  const [isOpen, setIsOpen] = useState(false);
-
   useEffect(() => {
     AOS.init({ duration: 700, once: true, easing: "ease-out" });
   }, []);
@@ -15,23 +12,23 @@ export default function Hero() {
   return (
     <>
       <Helmet>
-        <title>The Brothers | Hamburgueria Artesanal</title>
+        <title>The Brothers | Peça no iFood</title>
         <meta
           name="description"
-          content="The Brothers — Hambúrguer artesanal na Rua do Rosário, 1091. Sabor forte, clássico e direto ao ponto."
+          content="Peça The Brothers no iFood — entrega rápida, sabor artesanal e classicão sem mistério."
         />
 
-        <meta property="og:title" content="The Brothers | Hambúrguer Artesanal" />
+        <meta property="og:title" content="The Brothers — Peça no iFood" />
         <meta
           property="og:description"
-          content="Experiência gastronômica autêntica, clara e impactante. Rua do Rosário, 1091."
+          content="Hambúrguer artesanal direto para sua casa. Confira nosso cardápio no iFood."
         />
         <meta property="og:image" content="/assets/imgs/burger-hero.webp" />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="website" />\
       </Helmet>
 
-      {/* HERO CLEAN / BRANCO + VERMELHO */}
-      <section className="relative w-full flex items-center justify-center px-4 py-20 md:py-32 bg-white text-black overflow-hidden">
+      {/* SECTION RED + CLEAN */}
+      <section id="home" className="relative w-full flex items-center justify-center px-4 py-20 md:py-32 bg-black text-white overflow-hidden">
         <div className="flex flex-col-reverse md:flex-row w-full max-w-6xl items-center gap-12">
           {/* TEXTOS */}
           <div
@@ -39,66 +36,48 @@ export default function Hero() {
             data-aos="fade-up"
           >
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-red-600">
-              Hambúrguer artesanal,
-              <br /> sem mistério.
+              Peça The Brothers
+              <br /> no iFood.
             </h1>
 
-            <p className="text-base md:text-lg text-gray-700 max-w-md leading-relaxed">
-              A The Brothers traz uma proposta clara: sabor real, receita artesanal e qualidade do início ao fim.
-              Estamos na Rua do Rosário, 1091 — vem viver a experiência.
+            <p className="text-base md:text-lg text-white opacity-90 max-w-md leading-relaxed">
+              Agora ficou ainda mais fácil receber seu hambúrguer artesanal com sabor direto ao ponto.
+              Entrega rápida, qualidade total e aquele padrão Brothers que você já conhece.
             </p>
 
-            <p className="text-base md:text-lg font-semibold text-red-600">
-              Vermelho na essência. Branco na identidade.
-            </p>
+            <div className="flex flex-col space-y-2">
+              <p className="text-base md:text-lg font-semibold text-red-600 opacity-90">
+                Vermelho na essência. Branco na identidade.
+              </p>
+            </div>
 
-            <Link
-              to="/contact"
-              className="px-8 py-3 bg-red-600 hover:bg-red-500 transition-all shadow-md text-white font-semibold rounded-md"
+            <a
+              href="https://www.ifood.com.br/delivery/betim-mg/the-brothers-burguers-angola/24644122-0506-43a8-b9ac-839089919b85"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 bg-red-600 opacity-90 hover:bg-red-500 transition-all shadow-md text-white font-semibold rounded-md"
             >
-              Fazer pedido
-            </Link>
+              Pedir no iFood
+            </a>
+            <a
+              href="https://wa.me/5531992311011?text=https%3A%2F%2Fwww.ifood.com.br%2Fdelivery%2Fbetim-mg%2Fthe-brothers-burguers-angola%2F24644122-0506-43a8-b9ac-839089919b85"  
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 bg-red-600 opacity-90 hover:bg-red-500 transition-all shadow-md text-white font-semibold rounded-md"
+            >
+              Pedir no Whatsapp
+            </a>
           </div>
 
           {/* IMAGEM */}
           <div className="w-full md:w-1/2 flex justify-center" data-aos="fade-left">
             <img
               src="/assets/imgs/image.png"
-              alt="Hambúrguer artesanal The Brothers"
+              alt="The Brothers — Hambúrguer artesanal"
               className="w-[70%] max-w-md rounded-xl shadow-xl shadow-red-500/20 object-cover transition-transform duration-300 hover:scale-105"
             />
           </div>
         </div>
-
-        {/* MODAL */}
-        {isOpen && (
-          <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 px-4">
-            <div className="bg-white border border-red-600 text-black rounded-xl p-6 w-full max-w-md shadow-xl relative animate-[scale_0.3s_ease-in-out]">
-              <button
-                onClick={() => setIsOpen(false)}
-                className="absolute top-3 right-4 text-red-600 hover:text-red-800 text-2xl"
-              >
-                ×
-              </button>
-
-              <h3 className="text-2xl font-bold mb-4 text-center text-red-600">
-                Fale com a The Brothers
-              </h3>
-
-              <p className="text-gray-700 text-center mb-4">
-                Contato para pedidos, eventos e combos especiais.
-              </p>
-
-              <a
-                href="https://wa.me/5531971705728"
-                target="_blank"
-                className="block w-full text-center py-3 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-500 transition-all"
-              >
-                Chamar no WhatsApp
-              </a>
-            </div>
-          </div>
-        )}
       </section>
     </>
   );
