@@ -39,7 +39,7 @@ export default function InstagramGrid() {
      <h2
   className="
     text-center text-red-600 opacity-90 font-black tracking-wide mb-16
-    text-xl sm:text-2xl md:text-3xl lg:text-4xl
+    text-4xl sm:text-4xl md:text-4xl lg:text-4xl
   "
 >
   MAIS SOBRE NÓS
