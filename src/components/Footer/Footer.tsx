@@ -24,7 +24,7 @@ export default function Footer() {
               <FaInstagram size={20} />
             </a>
             <a
-              href="https://wa.me/5531992311011?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20hamburgueria%20e%20gostaria%20de%20fazer%20um%20pedido.%20%0AAcesse%20nosso%20iFood:%20https%3A%2F%2Fwww.ifood.com.br%2Fdelivery%2Fbetim-mg%2Fthe-brothers-burguers-angola%2F24644122-0506-43a8-b9ac-839089919b85"
+              href="https://wa.me/5531987741463?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20hamburgueria%20e%20gostaria%20de%20fazer%20um%20pedido.%20%0AAcesse%20nosso%20iFood:%20https%3A%2F%2Fwww.ifood.com.br%2Fdelivery%2Fbetim-mg%2Fthe-brothers-burguers-angola%2F24644122-0506-43a8-b9ac-839089919b85"
               target="_blank"
               className="p-2 rounded-full bg-red-600 hover:bg-red-700 transition opacity-90"
             >
@@ -45,7 +45,7 @@ export default function Footer() {
 
           <div className="flex items-center gap-3 text-gray-200 opacity-90">
             <FaEnvelope className="text-red-600 opacity-90" />
-            <span>email@thebrothers.com</span>
+            <span>thebrothersbetim@gmail.com</span>
           </div>
 
           <div className="flex items-center gap-3 text-gray-200 opacity-90">

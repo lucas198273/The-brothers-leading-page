@@ -19,13 +19,13 @@ export default function About() {
         />
       </Helmet>
 
-      <section id="sobre" className="w-full bg-black  text-black py-24 px-6 flex justify-center">
+      <section id="sobre" className="w-full bg-black  text-black py-2 px-2 flex justify-center">
         <div
           className="bg-black opacity-60 max-w-5xl w-[80%] rounded-[60px] p-6 md:p-12 flex flex-col md:flex-row items-center gap-10"
           data-aos="fade-up"
         >
           {/* IMAGEM */}
-          <div className="w-full md:w-1/2">
+          <div className=" md:w-1/2 w-1/2 mt-14">
             <img
               src="/assets/imgs/logo.webp" // <-- substitua pela imagem real
               alt="Nossa hamburgueria"
@@ -50,7 +50,7 @@ export default function About() {
               Fortaleza.
             </p>
 
-            <p className="text-lg md:text-xl leading-relaxed mb-3.5 opacity-90">
+            <p className="text-lg md:text-xl leading-relaxed opacity-90">
               Hoje são 20 lojas espalhadas pelo Brasil, com uma experiência
               incrível e refeições de saborear rezando. Amamos o que fazemos e
               somos focados em oferecer a melhor qualidade, com ingredientes

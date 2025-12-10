@@ -8,7 +8,7 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
 import Footer from "./components/Footer/Footer";
-import { CartProvider } from "../contexts/CartContext";
+
 
 import ScrollTop from "./components/ScrollTop/ScrollTop";
 import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange/ScrollToTopOnRouteChange";
@@ -81,7 +81,7 @@ function AppContent() {
                 </script>
               </Helmet>
 
-              <main className="pt-20 min-h-screen flex flex-col">
+              <main className="pt-14 min-h-screen flex flex-col">
                 <Hero />
                 <MenuShowCase />
                 <SingleUnit />
@@ -105,11 +105,11 @@ function AppContent() {
 export default function App() {
   return (
     <HelmetProvider>
-      <CartProvider>
+
         <Router>
           <AppContent />
         </Router>
-      </CartProvider>
+
     </HelmetProvider>
   );
 }

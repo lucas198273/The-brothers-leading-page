@@ -28,14 +28,14 @@ export default function Hero() {
       </Helmet>
 
       {/* SECTION RED + CLEAN */}
-      <section id="home" className="relative w-full flex items-center justify-center px-4 py-20 md:py-32 bg-black text-white overflow-hidden">
+      <section id="home" className="relative w-full flex items-center justify-center px-10 py-20 md:py-32 bg-black text-white overflow-hidden">
         <div className="flex flex-col-reverse md:flex-row w-full max-w-6xl items-center gap-12">
           {/* TEXTOS */}
           <div
             className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-6"
             data-aos="fade-up"
           >
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-red-600">
+            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-white tracking-wide">
               Peça The Brothers
               <br /> no iFood.
             </h1>
@@ -45,11 +45,7 @@ export default function Hero() {
               Entrega rápida, qualidade total e aquele padrão Brothers que você já conhece.
             </p>
 
-            <div className="flex flex-col space-y-2">
-              <p className="text-base md:text-lg font-semibold text-red-600 opacity-90">
-                Vermelho na essência. Branco na identidade.
-              </p>
-            </div>
+        
 
             <a
               href="https://www.ifood.com.br/delivery/betim-mg/the-brothers-burguers-angola/24644122-0506-43a8-b9ac-839089919b85"
@@ -60,7 +56,7 @@ export default function Hero() {
               Pedir no iFood
             </a>
             <a
-              href="https://wa.me/5531992311011?text=https%3A%2F%2Fwww.ifood.com.br%2Fdelivery%2Fbetim-mg%2Fthe-brothers-burguers-angola%2F24644122-0506-43a8-b9ac-839089919b85"  
+              href="https://wa.me/5531987741463?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20hamburgueria%20e%20gostaria%20de%20fazer%20um%20pedido.%20%0AAcesse%20nosso%20iFood:%20https%3A%2F%2Fwww.ifood.com.br%2Fdelivery%2Fbetim-mg%2Fthe-brothers-burguers-angola%2F24644122-0506-43a8-b9ac-839089919b85"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 bg-red-600 opacity-90 hover:bg-red-500 transition-all shadow-md text-white font-semibold rounded-md"
@@ -74,7 +70,7 @@ export default function Hero() {
             <img
               src="/assets/imgs/image.png"
               alt="The Brothers — Hambúrguer artesanal"
-              className="w-[70%] max-w-md rounded-xl shadow-xl shadow-red-500/20 object-cover transition-transform duration-300 hover:scale-105"
+              className="w-[70%] max-w-md rounded-xl shadow-xl  shadow-amber-700 object-cover transition-transform duration-300 hover:scale-105"
             />
           </div>
         </div>
