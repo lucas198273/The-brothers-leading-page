@@ -21,6 +21,7 @@ export default function Header() {
   {/* LOGO TEXTO */}
   <Link
     to="/"
+    translate="no"
     className="text-lg md:text-xl font-extrabold tracking-wide text-white whitespace-nowrap"
   >
     THE BROTHERS
@@ -30,7 +31,7 @@ export default function Header() {
   <img
     src="/assets/imgs/logo.webp"
     alt="The Brothers Logo"
-    className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 object-contain float"
+    className="w-16 h-16 sm:w-12 sm:h-12 md:w-14 md:h-14 object-contain float"
   />
 </div>
 

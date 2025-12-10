@@ -66,13 +66,26 @@ export default function Hero() {
           </div>
 
           {/* IMAGEM */}
-          <div className="w-full md:w-1/2 flex justify-center" data-aos="fade-left">
-            <img
-              src="/assets/imgs/image.png"
-              alt="The Brothers — Hambúrguer artesanal"
-              className="w-[70%] max-w-md rounded-xl shadow-xl  shadow-amber-700 object-cover transition-transform duration-300 hover:scale-105"
-            />
-          </div>
+        <div
+  className="w-full md:w-1/2 flex justify-center"
+  data-aos="fade-left"
+>
+  <img
+    src="/assets/imgs/image.png"
+    alt="The Brothers — Hambúrguer artesanal"
+    className="
+     
+      w-[85%]               /* MOBILE maior */
+      sm:w-[90%]            /* TABLET leve ajuste */
+      md:w-[90%]            /* DESKTOP */
+      max-w-md
+      rounded-xl shadow-xl shadow-amber-700
+      object-cover
+      transition-transform duration-300 hover:scale-105
+    "
+  />
+</div>
+
         </div>
       </section>
     </>

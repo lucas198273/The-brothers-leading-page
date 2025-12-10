@@ -36,9 +36,15 @@ const items: InstaItem[] = [
 export default function InstagramGrid() {
   return (
     <section  className="w-full py-10 bg-black">
-      <h2 className="text-center  text-red-600  opacity-90 font-black text-5xl mb-16 tracking-wide">
-        MAIS SOBRE NÓS
-      </h2>
+     <h2
+  className="
+    text-center text-red-600 opacity-90 font-black tracking-wide mb-16
+    text-xl sm:text-2xl md:text-3xl lg:text-4xl
+  "
+>
+  MAIS SOBRE NÓS
+</h2>
+
 
       <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-6">
         {items.map((item, index) => (
