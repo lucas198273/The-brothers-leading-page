@@ -35,9 +35,9 @@ export default function Hero() {
             className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-6"
             data-aos="fade-up"
           >
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-white tracking-wide">
+            <h1 translate="no" className="text-4xl md:text-6xl font-extrabold leading-tight text-white tracking-wide">
               The Brothers
-              <br /> no iFood e 99Food.
+              <span translate="no" className="text-red-600 opacity-80"> Delivery</span>
             </h1>
 
             <p className="text-base md:text-lg text-white opacity-90 max-w-md leading-relaxed">
