@@ -23,8 +23,8 @@ export default function Hero() {
           property="og:description"
           content="Hambúrguer artesanal direto para sua casa. Confira nosso cardápio no iFood."
         />
-        <meta property="og:image" content="/assets/imgs/burger-hero.webp" />
-        <meta property="og:type" content="website" />\
+        <meta property="og:image" content="/assets/imgs/logo.webp" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       {/* SECTION RED + CLEAN */}
@@ -37,35 +37,35 @@ export default function Hero() {
           >
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-white tracking-wide">
               The Brothers
-              <br /> no iFood.
+              <br /> no iFood e 99Food.
             </h1>
 
             <p className="text-base md:text-lg text-white opacity-90 max-w-md leading-relaxed">
               Agora ficou ainda mais fácil receber seu hambúrguer artesanal com sabor direto ao ponto.
               Entrega rápida, qualidade total e aquele padrão Brothers que você já conhece.
             </p>
+            <div className="flex  sm:flex-row gap-4 mt-4">
+                  <img
+                  src="/assets/imgs/logo.webp"
+                  alt="The Brothers Logo"
+                  className="w-20 h-20 sm:w-20 sm:h-20 md:w-20 md:h-20 object-contain float pulse"
+                />
+                  {/* LOGO */}
+                <img
+                  src="/assets/imgs/logo2.webp"
+                  alt="The Brothers Logo"
+                  className="w-20 h-20 sm:w-20 sm:h-20 md:w-20 md:h-20 object-contain float pulse"
+                />
+           </div>
 
         
 
-            <a
-              href="https://www.ifood.com.br/delivery/betim-mg/the-brothers-burguers-angola/24644122-0506-43a8-b9ac-839089919b85"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-3 bg-red-600 opacity-90 hover:bg-red-500 transition-all shadow-md text-white font-semibold rounded-md"
-            >
-              Pedir no iFood
-            </a>
-            <a
-              href="https://wa.me/5531987741463?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20hamburgueria%20e%20gostaria%20de%20fazer%20um%20pedido.%20%0AAcesse%20nosso%20iFood:%20https%3A%2F%2Fwww.ifood.com.br%2Fdelivery%2Fbetim-mg%2Fthe-brothers-burguers-angola%2F24644122-0506-43a8-b9ac-839089919b85"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-3 bg-red-600 opacity-90 hover:bg-red-500 transition-all shadow-md text-white font-semibold rounded-md"
-            >
-              Pedir no Whatsapp
-            </a>
+
+
           </div>
 
           {/* IMAGEM */}
+          
         <div
   className="w-full md:w-1/2 flex justify-center float"
   data-aos="fade-left"

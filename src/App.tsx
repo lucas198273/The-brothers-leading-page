@@ -18,7 +18,7 @@ import PoliticaEPrivacidade from "./pages/PoliticasEPrivacidade";
 import MenuShowCase from "./components/MenuShowCase/MenuShowCase";
 import SingleUnit from "./components/SingleUnit/SingleUnit";
 import InstagramGrid from "./components/InstagramGrid/InstagramGrid";
-
+import DeliveryLinks from "./components/DeliveryLinks/DeliveryLinks";
 function AppContent() {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -83,10 +83,13 @@ function AppContent() {
 
               <main className="pt-14 min-h-screen flex flex-col">
                 <Hero />
-                <MenuShowCase />
+      
+                <MenuShowCase /> 
+                <DeliveryLinks />
                 <SingleUnit />
                 <About />
                 <InstagramGrid />
+
               </main>
             </>
           }

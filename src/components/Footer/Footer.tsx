@@ -13,6 +13,7 @@ export default function Footer() {
             Há 12 anos oferecendo hambúrguer artesanal com ingredientes frescos,
             sabor marcante e preparo dedicado. Qualidade e tradição em cada pedido.
           </p>
+          <a href="/politicas" className="text-red-600 hover:text-red-700 transition">Política de Privacidade</a>
 
           {/* Redes sociais */}
           <div className="flex gap-4 mt-4">

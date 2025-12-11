@@ -13,7 +13,7 @@ export default function Header() {
 <div
   className="
     rounded-2xl h-16 bg-black 
-    w-full sm:w-[80%] md:w-[40%]
+    w-full sm:w-[90%] md:w-[30%] mr-3
     flex items-center justify-center gap-4
     px-3 md:px-4 py-2
   "
@@ -27,12 +27,7 @@ export default function Header() {
     THE BROTHERS
   </Link>
 
-  {/* LOGO */}
-  <img
-    src="/assets/imgs/logo.webp"
-    alt="The Brothers Logo"
-    className="w-16 h-16 sm:w-12 sm:h-12 md:w-14 md:h-14 object-contain float"
-  />
+
 </div>
 
         {/* MENU DESKTOP */}
@@ -66,7 +61,7 @@ export default function Header() {
 
           {/* DELIVERY */}
           <a
-            href="https://www.ifood.com.br/delivery/betim-mg/the-brothers-burguers-angola/24644122-0506-43a8-b9ac-839089919b85"
+            href="https://oia.99app.com/dlp9/9HkZ0K?area=BR"
             target="_blank"
             className="
               bg-red-600 opacity-90 text-white 
