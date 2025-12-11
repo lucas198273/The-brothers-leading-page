@@ -19,24 +19,38 @@ export default function About() {
         />
       </Helmet>
 
-      <section id="sobre" className="w-full bg-black  text-black py-2 px-2 flex justify-center">
+      {/* SECTION COM FUNDO AMADEIRADO */}
+ <section
+  id="sobre"
+  className="
+    relative w-full py-20 px-4 flex justify-center 
+    bg-cover bg-center 
+    bg-[url('/assets/imgs/fundoabout.png')]
+  "
+>
+
+
+        {/* OVERLAY ESCURO / PELÍCULA */}
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-[1px]" />
+
+        {/* CONTEÚDO */}
         <div
-          className="bg-black opacity-60 max-w-5xl w-[80%] rounded-[60px] p-6 md:p-12 flex flex-col md:flex-row items-center gap-10"
+          className="relative z-10 bg-black/60 max-w-5xl w-[90%] rounded-[60px] p-6 md:p-12 flex flex-col md:flex-row items-center gap-10"
           data-aos="fade-up"
         >
           {/* IMAGEM */}
-          <div className=" md:w-1/2 w-1/2 mt-14 float">
+          <div className="md:w-1/2 w-1/2 mt-14 float">
             <img
-              src="/assets/imgs/logo.webp" // <-- substitua pela imagem real
+              src="/assets/imgs/logo.webp"
               alt="Nossa hamburgueria"
               className="w-full h-auto rounded-[50px] object-cover"
             />
           </div>
 
           {/* TEXTO */}
-          <div className="w-full md:w-1/2  text-black opacity-90">
+          <div className="w-full md:w-1/2 text-white">
             <h2
-              className="text-4xl text-white md:text-4xl font-extrabold mb-6 tracking-wide"
+              className="text-4xl md:text-4xl font-extrabold mb-6 tracking-wide"
               style={{ fontFamily: "Impact, sans-serif" }}
             >
               QUEM SOMOS
@@ -50,14 +64,12 @@ export default function About() {
               Fortaleza.
             </p>
 
-            <p className="text-lg md:text-xl leading-relaxed opacity-90">
+            <p className="text-lg md:text-xl leading-relaxed opacity-90 text-white">
               Hoje são 20 lojas espalhadas pelo Brasil, com uma experiência
               incrível e refeições de saborear rezando. Amamos o que fazemos e
               somos focados em oferecer a melhor qualidade, com ingredientes
               frescos e uma receita preparada como só a gente sabe!
             </p>
-
-           
           </div>
         </div>
       </section>

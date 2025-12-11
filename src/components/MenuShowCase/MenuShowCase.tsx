@@ -18,7 +18,7 @@ export default function MenuShowcase() {
   return (
     <section
       id="cardapio"
-      className="w-full mt-0 bg-black py-20 px-4 flex flex-col items-center text-white"
+      className="w-full mt-0 bg-white py-20 px-4 flex flex-col items-center text-white"
     >
       {/* TÍTULO */}
       <h2
@@ -58,14 +58,14 @@ export default function MenuShowcase() {
       </div>
 
       {/* BOTÃO IFOOD — AQUI É O LUGAR CERTO */}
+
       <div className="mt-12 flex items-center">
         <a
-          href="https://www.ifood.com.br/delivery/betim-mg/the-brothers-burguers-angola/24644122-0506-43a8-b9ac-839089919b85"
-          target="_blank"
+          href="#plataformas"
           rel="noopener noreferrer"
           className="px-8 py-3 bg-red-600 opacity-90 hover:bg-red-500 transition-all shadow-md text-white font-semibold rounded-md"
         >
-          Ver cardápio no iFood
+          Ver cardápio completo
         </a>
       </div>
     </section>

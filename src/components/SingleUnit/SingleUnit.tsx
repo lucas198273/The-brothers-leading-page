@@ -22,7 +22,7 @@ export default function SingleUnit() {
 
       <section
         id="unidade"
-        className="w-full bg-black text-white py-20 px-4 flex flex-col items-center"
+        className="w-full bg-white text-black py-20 px-4 flex flex-col items-center"
       >
         {/* TÍTULO */}
         <h1
@@ -34,7 +34,7 @@ export default function SingleUnit() {
 
         {/* SUBTÍTULO */}
         <p
-          className="text-lg md:text-xl text-gray-200 mb-12 text-center"
+          className="text-lg md:text-xl text-black opacity-90 mb-12 text-center"
           data-aos="fade-up"
         >
           Informações completas da nossa hamburgueria
